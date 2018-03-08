@@ -109,7 +109,7 @@ const convertDatetoSol = (roverName, dateOrSol) => {
     sol = _.toInteger(dateOrSol);
   }
 
-  // TODO determine if Sol is above max sol for rover and throw error
+  // TODO determine if Sol is above max sol for rover and throw error id:2 gh:3 ic:gh
   return sol;
 };
 
@@ -127,7 +127,7 @@ const getMarsRoverPhotos = (rover, camera, sol) => {
     page: 1
   };
 
-  // TODO change this logic to only add qs.camera if value matches name from CAMERAS object
+  // TODO change this logic to only add qs.camera if value matches name from CAMERAS object id:3 gh:4 ic:gh
   if (_.lowerCase(camera) !== _.lowerCase('all')) {
     qs.camera = camera;
   }

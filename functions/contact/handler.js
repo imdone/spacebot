@@ -4,7 +4,7 @@ const _ = require('lodash');
 const AWS = require('aws-sdk'); // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved
 const qs = require('qs');
 
-AWS.config.region = process.env.SERVERLESS_REGION; // HACK as aws-sdk doesn't read in region automatically :(
+AWS.config.region = process.env.SERVERLESS_REGION; // HACK as aws-sdk doesn't read in region automatically :( id:0 gh:1 ic:gh
 // Check if environment supports native promises
 if (typeof Promise === 'undefined') {
   AWS.config.setPromisesDependency(require('bluebird'));  // eslint-disable-line global-require

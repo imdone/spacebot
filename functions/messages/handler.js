@@ -7,7 +7,7 @@ const qs = require('qs');
 const slack = require('../lib/slack');
 
 const favoritesTable = `${process.env.SERVERLESS_PROJECT}-favorites-${process.env.SERVERLESS_STAGE}`;
-AWS.config.region = process.env.SERVERLESS_REGION; // HACK as aws-sdk doesn't read in region automatically :(
+AWS.config.region = process.env.SERVERLESS_REGION; // HACK as aws-sdk doesn't read in region automatically :( id:5 gh:6 ic:gh
 // Check if environment supports native promises
 if (typeof Promise === 'undefined') {
   AWS.config.setPromisesDependency(require('bluebird'));  // eslint-disable-line global-require
@@ -16,7 +16,7 @@ if (typeof Promise === 'undefined') {
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 
 const saveFavorite = (userId, service, mediaId, messagePayload) => {
-  // TODO add 4th optionalParams obj. then check for values present in it
+  // TODO add 4th optionalParams obj. then check for values present in it id:4 gh:5 ic:gh
   // and add additional attributes to the params.Item object before calling putItem
   const params = {
     TableName: favoritesTable,

@@ -5,7 +5,7 @@ const AWS = require('aws-sdk'); // eslint-disable-line import/no-extraneous-depe
 const moment = require('moment');
 
 const oauthTokensTable = `${process.env.SERVERLESS_PROJECT}-oauthtokens-${process.env.SERVERLESS_STAGE}`;
-AWS.config.region = process.env.SERVERLESS_REGION; // HACK as aws-sdk doesn't read in region automatically :(
+AWS.config.region = process.env.SERVERLESS_REGION; // HACK as aws-sdk doesn't read in region automatically :( id:1 gh:2 ic:gh
 // Check if environment supports native promises
 if (typeof Promise === 'undefined') {
   AWS.config.setPromisesDependency(require('bluebird'));  // eslint-disable-line global-require
